@@ -1,0 +1,24 @@
+/* Стили для хедера*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f9fa;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    text-decoration: none;
+    color: #333
+}
+
+.cart {
+    font-weight: bold;
+}
