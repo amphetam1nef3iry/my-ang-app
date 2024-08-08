@@ -1,6 +1,12 @@
 <div *ngIf="product">
   <h1>{{ product.title }}</h1>
+  <img [src]="product.image" alt="{{ product.title }}" widh="200" height="300" />
   <p>{{ product.description }}</p>
-  <p>Price: {{ product.price }}</p>
-  <button (click)="addToCart()">Добавить в корзину</button>
+  <p>Category: {{product.category }}</p>
+  <p>Price: {{ product.price | currency }}</p>
+  <p>Rate: {{ product.rating.rate }} ({{ product.rating.count }} reviews)</p>
+  <button (click)="addToCart()">Add to cart</button>
+</div>
+<div *ngIf ="!product">
+  <p>Loading...</p>
 </div>
